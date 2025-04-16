@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .subject-box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .subject-box:hover {
+            background-color: #45a049;
+        }
+        .subject-page {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .subject-page.active {
+            display: block;
+        }
+        .resource-box {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .resource-box:hover {
+            background-color: #1e88e5;
+        }
+        .resource-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .resource-content.active {
+            display: block;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Subjects</h2>
+        <a href="#" class="subject-box" onclick="showSubject('comMaths')">Combined Maths</a>
+        <a href="#" class="subject-box" onclick="showSubject('physics')">Physics</a>
+        <a href="#" class="subject-box" onclick="showSubject('bio')">Biology</a>
+        <a href="#" class="subject-box" onclick="showSubject('chem')">Chemistry</a>
+        <a href="#" class="subject-box" onclick="showSubject('agri')">Agriculture</a>
+    </div>
+
+    <div class="subject-page" id="comMathsPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Combined Maths</h2>
+        <a href="#" class="resource-box" onclick="showResource('comMathsPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('comMathsYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="comMathsPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('comMaths')">Back to Combined Maths</a>
+        <h2>Combined Maths - Past Papers</h2>
+        <ul>
+            <li>No past papers available yet.</li>
+        </ul>
+    </div>
+    <div class="resource-content" id="comMathsYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('comMaths')">Back to Combined Maths</a>
+        <h2>Combined Maths - YouTube Links</h2>
+        <ul>
+            <li>No YouTube links available yet.</li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="physicsPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Physics</h2>
+        <a href="#" class="resource-box" onclick="showResource('physicsPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('physicsYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="physicsPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('physics')">Back to Physics</a>
+        <h2>Physics - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/24215/1995-a-l/62262/1995-al-physics-past-paper-sinhala-medium.pdf" target="_blank">1995 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24221/1996-a-l-past-paper/62266/1996-al-physics-past-paper-sinhala-medium.pdf" target="_blank">1996 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24227/1997-a-l/62270/1997-al-physics-past-paper-sinhala-medium.pdf" target="_blank">1997 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24233/1998-a-l/62274/1998-al-physics-past-paper-sinhala-medium.pdf" target="_blank">1998 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24239/1999-a-l/62278/1999-al-physics-past-paper-sinhala-medium.pdf" target="_blank">1999 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24324/2000-al/62282/2000-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2000 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://www.scribd.com/document/524701691/2001AL-Physics#" target="_blank">2001 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/24251/2002-al/62286/2002-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2002 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24337/2003-al/62290/2003-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2003 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://www.scribd.com/document/655444280/Alevelhub-com-2004AL-Physics#" target="_blank">2004 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/24261/2005-a-l/62294/2005-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2005 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24266/2006-a-l/62298/2006-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2006 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24271/2007-a-l/62302/2007-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2007 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23783/2008-a-l/62306/2008-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2008 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23792/2009-a-l/62310/2009-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2009 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28784/2010-ppr.pdf" target="_blank">2010 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28781/2011-ppr.pdf" target="_blank">2011 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28782/2012-ppr.pdf" target="_blank">2012 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28782/2012-ppr.pdf" target="_blank">2013 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28783/2014-ppr.pdf" target="_blank">2014 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28778/2015-ppr.pdf" target="_blank">2015 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28777/2016-ppr.pdf" target="_blank">2016 A/L Physics Past Paper</a></li>
+            <li><a href="https://drive.google.com/file/d/1vkH_R6WUD9w8_xRodJFIwLKwgs55cFIU/view?usp=sharing" target="_blank">2017 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28776/2018-ppr.pdf" target="_blank">2018 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28779/2019-ppr-new.pdf" target="_blank">2019 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/28816/general-certificate-of-education-advanced-level-examination-2020-august-new-syllabus-physics.pdf" target="_blank">2020 A/L Physics Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/52726/2021-al-physics-past-paper-sinhala-medium.pdf" target="_blank">2021 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/69981/gce-advanced-level-2022-physics-sinhala-medium-paper.pdf" target="_blank">2022 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/27227/2023-2024-a-l/71008/20232024-al-physics-paper-sinhala-medium.pdf" target="_blank">2023 A/L Physics Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/31381/2024-a-l/85066/2024-al-physics-paper-sinhala-medium.pdf" target="_blank">2024 A/L Physics Past Paper (Sinhala Medium)</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="physicsYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('physics')">Back to Physics</a>
+        <h2>Physics - YouTube Links</h2>
+        <ul>
+            <li>No YouTube links available yet.</li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="bioPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Biology</h2>
+        <a href="#" class="resource-box" onclick="showResource('bioPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('bioYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="bioPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('bio')">Back to Biology</a>
+        <h2>Biology - Past Papers</h2>
+        <ul>
+            <li>No past papers available yet.</li>
+        </ul>
+    </div>
+    <div class="resource-content" id="bioYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('bio')">Back to Biology</a>
+        <h2>Biology - YouTube Links</h2>
+        <ul>
+            <li>No YouTube links available yet.</li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="chemPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Chemistry</h2>
+        <a href="#" class="resource-box" onclick="showResource('chemPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('chemYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="chemPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('chem')">Back to Chemistry</a>
+        <h2>Chemistry - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/24215/1995-a-l/61605/1995-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">1995 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24221/1996-a-l-past-paper/61609/1996-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">1996 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24227/1997-a-l/61613/1997-a-l-chemistry-past-paper-sinhala-medium.pdf" target="_blank">1997 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24233/1998-a-l/61617/1998-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">1998 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24239/1999-a-l/61621/1999-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">1999 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24324/2000-al/61626/2000-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2000 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24249/2001-al/61630/2001-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2001 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24251/2002-al/61634/2002-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2002 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24337/2003-al/61638/2003-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2003 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24260/2004-a-l/61642/2004-a-l-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2004 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24261/2005-a-l/61646/2005-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2005 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24266/2006-a-l/61650/2006-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2006 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/24271/2007-a-l/61654/2007-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2007 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23783/2008-a-l/61658/2008-a-l-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2008 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23792/2009-a-l/61662/2009-al-chemistry-past-paper-sinhala-medium.pdf" target="_blank">2009 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29463/2010-ppr-3.pdf" target="_blank">2010 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29462/2011-ppr-3.pdf" target="_blank">2011 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29460/2012-ppr-4.pdf" target="_blank">2012 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29461/2013-ppr-3.pdf" target="_blank">2013 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29464/2014-ppr-3.pdf" target="_blank">2014 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29457/2015-ppr-3.pdf" target="_blank">2015 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29456/2016-ppr-4.pdf" target="_blank">2016 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29460/2012-ppr-4.pdf" target="_blank">2017 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29455/2018-ppr-4.pdf" target="_blank">2018 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/7820/gce-a-l/29416/2019-new-m.pdf" target="_blank">2019 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://downloads.pastpapers.wiki/download/26/2020-a-l-past-papers/224/general-certificate-of-education-advanced-level-examination-2020-august-new-syllabus-chemistry.pdf" target="_blank">2020 A/L Chemistry Past Paper</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/52688/2021-al-chemistry-past-paper-sinhala-medium-2.pdf" target="_blank">2021 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/69984/gce-advanced-level-2022-chemistry-sinhala-medium-paper.pdf" target="_blank">2022 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/27227/2023-2024-a-l/70939/20232024-al-chemistry-paper-sinhala-medium.pdf" target="_blank">2023 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/31381/2024-a-l/84948/2024-al-chemistry-paper-sinhala-medium.pdf" target="_blank">2024 A/L Chemistry Past Paper (Sinhala Medium)</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="chemYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('chem')">Back to Chemistry</a>
+        <h2>Chemistry - YouTube Links</h2>
+        <ul>
+            <li>No YouTube links available yet.</li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="agriPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Agriculture</h2>
+        <a href="#" class="resource-box" onclick="showResource('agriPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('agriYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="agriPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('agri')">Back to Agriculture</a>
+        <h2>Agriculture - Past Papers</h2>
+        <ul>
+            <li>No past papers available yet.</li>
+        </ul>
+    </div>
+    <div class="resource-content" id="agriYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('agri')">Back to Agriculture</a>
+        <h2>Agriculture - YouTube Links</h2>
+        <ul>
+            <li>No YouTube links available yet.</li>
+        </ul>
+    </div>
+
+    <script>
+        function showSubject(subject) {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById(subject + 'Page').classList.add('active');
+        }
+
+        function showResource(resource) {
+            document.querySelectorAll('.subject-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(resource).classList.add('active');
+        }
+
+        function backToHome() {
+            document.querySelectorAll('.subject-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.querySelectorAll('.resource-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelector('.container').style.display = 'block';
+        }
+
+        function backToSubject(subject) {
+            document.querySelectorAll('.resource-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(subject + 'Page').classList.add('active');
+        }
+    </script>
+</body>
+</html>
